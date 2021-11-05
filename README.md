@@ -1,8 +1,4 @@
 # CleanArchitectureStudy
-클린 아키텍처 소프트웨어 구조와 설계의 원칙 스터디
-
-
-# 오브젝트 : 코드로 이해하는 객체지향 설계
 [Clean Architecture 소프트웨어 구조와 설계의 원칙, 로버트 C. 마틴](https://book.naver.com/bookdb/book_detail.nhn?bid=7390287) 책을 보고 스터디/발표를 하기위한 자료를 업로드하는 레포지토리입니다.
 
 ## 진행방법
