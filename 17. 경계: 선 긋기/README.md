@@ -11,7 +11,21 @@
 
 ## 어떻게 선을 그을까? 그리고 언제 그을까?
  - 선은 관련있는것과 없는것 사이에 긋는다.
+ - GUI는 업무 규칙과는 관련없기에 선을 긋는다.
+ - 데이터베이스는 GUI와 관련이 없으므로 이 둘 사이에도 선이 있어야한다.
 ![다운로드](https://user-images.githubusercontent.com/50142323/147644075-6abfa5df-b7fd-42d6-ac26-17cfe1d3284e.png)
  - 위 그림을 보면 경계선은 Interface, Database Access사이에 그어진다. 화살표의 방향을 보면 Database Access를 알고있는 클래스는 없다.
-<img width="416" alt="다운로드 (1)" src="https://user-images.githubusercontent.com/50142323/147644419-cd6a81c1-5035-499d-ade5-c6c1341b2b7b.png">
- - 큰 
+![117563556-c4c05000-b0e1-11eb-9f3e-303fec812720](https://user-images.githubusercontent.com/50142323/147652393-e7490287-a36a-456a-b7ed-bcffb4c7f04d.png)
+ - 큰 개념으로 보자면 Business Rules 컴포넌트안에 Database Interface를 Database 컴포넌트안에 Database Access가 의존하고있다.
+ - 화살표 방향은 Business Rules 컴포넌트를 향하고있기 때문에 Business Rules에서는 어떤 종류의 데이터베이스도 사용할수 있음을 알수있으며, Database 컴포넌트는 다른 구현체로도 교체될 수 있다.
+
+## 입력과 출력은?
+ - 위의 Business Rules 컴포넌트와 Databse 컴포넌트의 관계와 같이 Business 컴포넌트는 GUI 컴포넌트를 신경쓰지 않는다. 마찬가지로 GUI는 다른 종류의 인터페이스로 교체할 수 있다.
+![다운로드](https://user-images.githubusercontent.com/50142323/147652706-01cab1e6-da08-47a4-a27c-8183cef0e201.png)
+
+## 플러그인 아키텍처
+데이터베이스와 GUI에 대해 내린 두가지 결정을 하나로 합쳐서 보면 컴포넌트 추가와 관련한 일종의 패턴이 만들어진다.
+![다운로드 (1)](https://user-images.githubusercontent.com/50142323/147652988-f1d307da-5e00-45f8-aa88-a6661157a44f.png)
+이 패턴은 시스템에서 서드파티 플러그인을 사용할 수 있게 한 패턴과 동일하다. 
+소프트웨어 개발 기술의 역사는 플러그인을 손쉽게 생성하여, 확장 가능하며 유지보수가 쉬운 시스템 아키텍처를 확립할 수 있게 만드는 방법에 대한 이야기다.
+
