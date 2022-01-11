@@ -13,7 +13,7 @@
 ## 일차원 경계
 완벽한 형태의 아키텍처 경계는 양방향으로 격리된 상태를 유지해야 하므로 쌍방향 Boundary 인터페이스를 사용한다. 
 양방향으로 격리된 상태를 유지하려면 초기 설정할 때나 지속적으로 유지할 때도 비용이 많이 든다.
-![다운로드](https://user-images.githubusercontent.com/50142323/148881276-980e4df7-db9d-4834-83b9-cf9fe459a1e7.png)
+![다운로드](https://user-images.githubusercontent.com/50142323/148881276-980e4df7-db9d-4834-83b9-cf9fe459a1e7.png) 
  - 위 이미지는 전통적인 전략(Strategy) 패턴 이다.
  - ServiceBoundary 인터페이스는 클라이언트가 사용하며 ServiceImpl 클래스가 구현한다.
  - Client를 ServiceImpl로 부터 격리 시키고자 의존성 역전 원칙을 적용한다.
@@ -21,7 +21,7 @@
 
 ## 퍼사드
 훨씬 더 단순한 경계는 퍼사드 패턴이다.
-![124385826-68109880-dd12-11eb-9ab8-583f485ed5a8](https://user-images.githubusercontent.com/50142323/148881713-281a1104-b24f-48ba-8cf1-4c7820c4a4c5.png)
+![124385826-68109880-dd12-11eb-9ab8-583f485ed5a8](https://user-images.githubusercontent.com/50142323/148881713-281a1104-b24f-48ba-8cf1-4c7820c4a4c5.png) 
 의존성 역전은 희생하는 방법이고, 경계는 Facade 클래스로만 간단히 정의된다.
  - Facade class에는 모든 서비스 클래스를 메서드 형태로 정의하고, 서비스 호출이 발생하면 해당 클래스로 호출을 전달한다.
  - 클라이언트는 이들 서비스 클래스에 직접 접근할 수 없다.
