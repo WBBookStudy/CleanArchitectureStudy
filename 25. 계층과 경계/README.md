@@ -24,7 +24,6 @@ UI에서 언어가 유일한 변경의 축은 아니다. 예를 들면 텍스트
 > 변형들을 모두 제거하고 순전히 API 컴포넌트만 집중하면 아래와 같은 다이어그램이 된다.
 
 ![004](https://user-images.githubusercontent.com/50142323/148905793-4c0e9ef9-8e37-45cc-aeab-8b6f18fd30b8.png)
- - 정보의 흐름 : 사용자 입력 -> TextDelivery -> Language(GameRules에 적합한 명령어로 번역) -> GameRules -> 우측 하단의 DataStorage로 데이터 이동 -> GameRules 출력 -> Language(적절한 언어로 번역) -> TextDelivery -> 사용자 output
  - 정보가 흐르는 방향을 보면 데이터 흐름을 두 개의 흐름으로 효과적으로 분리한다.
  - 왼쪽의 흐름은 사용자와의 통신에 관여하며, 오른족의 흐름은 데이터 영속성에 관여한다.
  - 두 흐름이 GameRules에서 만나, GameRules는 두 흐름이 모두 거치게 되는 데이터에 대한 최종적인 처리기가 된다.
