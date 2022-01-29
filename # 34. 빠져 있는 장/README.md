@@ -30,10 +30,12 @@
 
 <img width="250" alt="다운로드" src="https://user-images.githubusercontent.com/50142323/151652083-a5cc2176-287c-4e26-bdd5-257b66b35ba6.png">
 
- - com.mycompany.myapp.domain 패키지가 '내부' 도메인 이며 나머지 패키지는 '외부'이다.
+> com.mycompany.myapp.domain 패키지가 '내부' 도메인 이며 나머지 패키지는 '외부'이다.
 
 
 ## 컴포넌트 기반 패키지
+
+
 
 ## 구현 세부사항엔 항상 문제가 있다.
 
