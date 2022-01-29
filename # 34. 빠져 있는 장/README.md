@@ -22,6 +22,15 @@
 
 
 ## 포트와 어댑터
+육각형 아키텍처 혹은 포트와 어댑터방식으로 접근하는 이유는 업무/도메인에 초점을 둔 코드가 프레임워크나 DB같은 세부사항에서 독립적이며 분리된 아키텍처를 만들기 위함이다.
+![다운로드 (3)](https://user-images.githubusercontent.com/50142323/151652060-884e0b75-0eae-48d4-a1b5-ad5eafe97066.png)
+
+> 인프라(서드파티)가 도메인을 의존하며 절대 그 반대는 되면 안된다.
+
+<img width="250" alt="다운로드" src="https://user-images.githubusercontent.com/50142323/151652083-a5cc2176-287c-4e26-bdd5-257b66b35ba6.png">
+
+ - com.mycompany.myapp.domain 패키지가 '내부' 도메인 이며 나머지 패키지는 '외부'임.
+
 
 ## 컴포넌트 기반 패키지
 
